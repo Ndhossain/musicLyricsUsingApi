@@ -32,7 +32,7 @@ function getLyrics(artist, title) {
     fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`)
         .then(res => res.json())
         .then(data => {
-            document.getElementById('lyric').innerHTML = `<p>${data.lyrics}</p>`
+            document.getElementById('lyric').innerText = data.lyrics
         })
 }
 
